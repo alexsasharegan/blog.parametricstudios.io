@@ -1,0 +1,20 @@
+{
+  "name": "tailwind-blog",
+  "version": "1.0.0",
+  "description": "blog theme using tailwindcss",
+  "main": "index.js",
+  "dependencies": {
+    "tailwindcss": "^0.6.1",
+    "uglifycss": "0.0.29"
+  },
+  "devDependencies": {
+    "@types/node": "^10.5.2"
+  },
+  "scripts": {
+    "minify:css": "uglifycss static/css/main.css > static/css/main.min.css",
+    "build:tailwind": "tailwind build -o static/css/main.css src/css/main.css",
+    "build:css": "npm run build:tailwind && npm run minify:css"
+  },
+  "author": "",
+  "license": "MIT"
+}
