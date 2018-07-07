@@ -11,8 +11,8 @@
     "@types/node": "^10.5.2"
   },
   "scripts": {
-    "minify:css": "uglifycss static/css/main.css > static/css/main.min.css",
-    "build:tailwind": "tailwind build -o static/css/main.css src/css/main.css",
+    "minify:css": "uglifycss static/css/tailwind-blog.css > static/css/tailwind-blog.min.css",
+    "build:tailwind": "tailwind build -o static/css/tailwind-blog.css src/css/main.css",
     "build:css": "npm run build:tailwind && npm run minify:css"
   },
   "author": "",

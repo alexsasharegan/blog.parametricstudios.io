@@ -1,3 +1,39 @@
-baseURL = "https://blog.parametricstudios.io/"
+baseURL = "https://blog.parametricstudios.io"
 languageCode = "en-us"
-title = "Parametric Studios"
+theme = "tailwind-blog"
+pygmentsCodeFences = true
+pygmentsStyle = "monokai"
+metaDataFormat = "toml"
+
+[params]
+  title = "Parametric Studios"
+  # description = "..."
+  authorimage = "/i/alex/avatar-500.jpg"
+  dateformat = "Jan 2, 2006"
+  highlightjs = true
+  # highlightjsstyle = "github"
+  # please choose either GraphComment or Disqus
+  # GraphCommentId = "your-graph-comment-id"
+  # layoutReverse = true
+  # sidebarSticky = true
+
+[params.author]
+  name = "Alex Regan"
+  image_sm = "/i/alex/avatar-500.jpg"
+  image_md = "/i/alex/avatar-1000.jpg"
+  image_lg = "/i/alex/avatar-1500.jpg"
+
+[params.meta]
+  description = "A tech blog covering topics like Mac/Linux, web design, JavaScript, Nodejs, Golang, and more."
+  keywords = []
+
+[params.social]
+  github = "alexsasharegan"
+  twitter = "alexsasharegan"
+
+[[navbar.menu_item]]
+  name = "Posts"
+  url = "/posts/"
+[[navbar.menu_item]]
+  name = "About"
+  url = "/about/"

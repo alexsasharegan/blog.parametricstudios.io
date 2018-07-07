@@ -1,0 +1,34 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+  {{ with .Site.Params.meta.description -}}
+  <meta name="description"
+        content="{{ . }}">
+  {{- end }}
+  {{ with .Site.Params.meta.keywords -}}
+  <meta name="keywords"
+        content="{{ . }}">
+  {{- end }}
+  {{ if .IsHome -}}
+  <title>{{ .Site.Title }}</title>
+  {{- else }}
+  <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+  {{- end }}
+  <meta content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}"
+        property="og:title">
+  <meta content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Site.Params.meta.description }}{{ if eq $isHomePage false }} - {{ .Description }}{{ end }}"
+        property="og:description">
+  <link rel="stylesheet"
+        href="{{ .Site.BaseURL }}/css/tailwind-blog.min.css">
+  <link href="{{ .RSSLink }}"
+        rel="alternate"
+        type="application/rss+xml"
+        title="{{ .Site.Title }}" />
+  <link href="{{ .RSSLink }}"
+        rel="feed"
+        type="application/rss+xml"
+        title="{{ .Site.Title }}" />
+</head>
